@@ -12,7 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="Vide" />
-<meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -28,14 +28,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/easing.js')?>"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
+		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
 </script>
 <!-- start-smoth-scrolling -->
-<link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet"> 
+<link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 <!--- start-rate---->
@@ -43,7 +43,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<?php 
+<?php
 include 'header.php';
 ?>
   <!-- Carousel
@@ -58,18 +58,18 @@ include 'header.php';
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <a href="kitchen.html"><img class="first-slide" src="<?php echo base_url('assets/images/ba1.jpg')?>" alt="First slide"></a>
-       
+
         </div>
         <div class="item">
           <a href="care.html"><img class="second-slide " src="<?php echo base_url('assets/images/ba2.jpg')?>" alt="Second slide"></a>
-         
+
         </div>
         <div class="item">
           <a href="hold.html"><img class="third-slide " src="<?php echo base_url('assets/images/ba3.jpg')?>" alt="Third slide"></a>
-          
+
         </div>
       </div>
-    
+
     </div>
 <!--content-->
 
@@ -85,23 +85,23 @@ include 'header.php';
 				</div>
 		</div>
 						<div class=" con-w3l wthree-of">
-						 <?php foreach($hasil as $i){ 
+						 <?php foreach($hasil as $i){
 		?>
 							<div class='col-md-3 m-wthree'>
-								<div class='col-m'>	
-										<img src='http://localhost:8080/jayus2/assets/<?php echo $i['img1'] ?>' class='img-responsive' alt=''>
-										
+								<div class='col-m'>
+										<img src='<?php echo base_url('assets/')?><?php echo $i['img1'] ?>' class='img-responsive' alt=''>
+
 									<div class='mid-1'>
 										<div class='women'>
-											<h6><b><a href='produk/<?php echo $i['id_iklan'] ?>'><?php echo $i['judul_iklan'] ?></a></b></h6>								
+											<h6><b><a href='produk/<?php echo $i['id_iklan'] ?>'><?php echo $i['judul_iklan'] ?></a></b></h6>
 										</div>
 										<div class='mid-2'>
 											<p><em class='item_price'>Rp <?php echo $i['harga'] ?></em></p>
-											
+
 											<div class='clearfix'></div>
 										</div>
-									
-										
+
+
 									</div>
 								</div>
 							</div>
@@ -110,12 +110,12 @@ include 'header.php';
 						 </div>
 					</div>
 				</div>
-			
-				
 
 
 
-<?php 
+
+
+<?php
 include 'footer.php';
 ?>
 <!-- //footer-->
@@ -128,9 +128,9 @@ include 'footer.php';
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-		*/								
+		*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
@@ -139,7 +139,7 @@ include 'footer.php';
 <!-- for bootstrap working -->
 <!-- //for bootstrap working -->
 
-  
+
  <!-- product -->
 
 </body>

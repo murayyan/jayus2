@@ -21,7 +21,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/easing.js')?>"></script>
 
 <!-- start-smoth-scrolling -->
-<link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet"> 
+<link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 <!--- start-rate---->
@@ -30,14 +30,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<?php 
+<?php
 	include 'header.php';
 ?>
   <!---->
  <!--banner-->
 <div class="banner-top">
 	<div class="container">
-	<?php foreach($hasil as $i){ 
+	<?php foreach($hasil as $i){
 		?>
 		<h3 ><?php echo $i['kategori'] ?></h3>
 		<h4><a href="index.html">Home</a><label>/</label><?php echo $i['kategori'] ?></h4>
@@ -45,41 +45,41 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 </div>
 
-								
+
 		<div class="single">
 			<div class="container">
 						<div class="single-top-main">
-	   		
+
 <div class="col-md-4 single-right-left ">
 			<div class="grid images_3_of_2">
 				<div class="flexslider">
-					
+
 					<ul class="slides">
-						<li data-thumb="http://localhost:8080/jayus2/assets/<?php echo $i['img1'] ?>">
-							<div class="thumb-image"> <img src="http://localhost:8080/jayus2/assets/<?php echo $i['img1'] ?>" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="<?php echo base_url('assets/')?><?php echo $i['img1'] ?>">
+							<div class="thumb-image"> <img src="<?php echo base_url('assets/')?><?php echo $i['img1'] ?>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
-						<li data-thumb="http://localhost:8080/jayus2/assets/<?php echo $i['img2'] ?>">
-							<div class="thumb-image"> <img src="http://localhost:8080/jayus2/assets/<?php echo $i['img2'] ?>" data-imagezoom="true" class="img-responsive"> </div>
-						</li>	
-						<li data-thumb="http://localhost:8080/jayus2/assets/<?php echo $i['img3'] ?>">
-							<div class="thumb-image"> <img src="http://localhost:8080/jayus2/assets/<?php echo $i['img3'] ?>" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="<?php echo base_url('assets/')?><?php echo $i['img2'] ?>">
+							<div class="thumb-image"> <img src="<?php echo base_url('assets/')?><?php echo $i['img2'] ?>" data-imagezoom="true" class="img-responsive"> </div>
+						</li>
+						<li data-thumb="<?php echo base_url('assets/')?><?php echo $i['img3'] ?>">
+							<div class="thumb-image"> <img src="<?php echo base_url('assets/')?><?php echo $i['img3'] ?>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
-				</div>	
+				</div>
 			</div>
 		</div>
-		
-		
+
+
 			<div class="col-md-7 single-top-left ">
 								<div class="single-right">
 				<h3><?php echo $i['judul_iklan'] ?></h3>
-				
-					
+
+
 				 <div class="pr-single">
 				  <p class="reduced ">Rp <?php echo $i['harga'] ?></p>
 				</div>
-				
+
 				<p class="in-pa"> <?php echo $i['detail_iklan'] ?>
 				<ul class="social-top">
 					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
@@ -87,17 +87,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<li><a href="#" class="icon pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i><span></span></a></li>
 					<li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
 				</ul>
-				 
-			   
+
+
 			<div class="clearfix"> </div>
 			</div>
 			</div>
 
-					
+
 		   <div class="clearfix"> </div>
-	   </div>	
-				 
-				
+	   </div>
+
+
 	</div>
 </div>
 	<?php } ?>
@@ -113,24 +113,24 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div>
 			</div>
 						<div class=" con-w3l wthree-of">
-							
-						<?php foreach($all as $i){ 
+
+						<?php foreach($all as $i){
 		?>
 							<div class='col-md-3 m-wthree'>
-								<div class='col-m'>	
-										<img src='http://localhost:8080/jayus2/assets/<?php echo $i['img1'] ?>' class='img-responsive' alt=''>
-										
+								<div class='col-m'>
+										<img src='<?php echo base_url('assets/')?><?php echo $i['img1'] ?>' class='img-responsive' alt=''>
+
 									<div class='mid-1'>
 										<div class='women'>
-											<h6><b><a href='<?php echo $i['id_iklan'] ?>'><?php echo $i['judul_iklan'] ?></a></b></h6>								
+											<h6><b><a href='<?php echo $i['id_iklan'] ?>'><?php echo $i['judul_iklan'] ?></a></b></h6>
 										</div>
 										<div class='mid-2'>
 											<p><em class='item_price'>Rp <?php echo $i['harga'] ?></em></p>
-											
+
 											<div class='clearfix'></div>
 										</div>
-									
-										
+
+
 									</div>
 								</div>
 							</div>
@@ -140,7 +140,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div>
 				</div>
 <!--footer-->
-<?php 
+<?php
 	include 'footer.php';
 ?>
 <!-- //footer-->
@@ -162,9 +162,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-		*/								
+		*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
