@@ -36,8 +36,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h3 >Login</h3>
-		<h4><a href="home">Home</a><label>/</label>Login</h4>
+		<h3 >Login Admin</h3>
+		<h4><a href="home">Home</a><label>/</label>Login Admin</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
@@ -47,16 +47,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	
 		<div class="main-agileits">
 				<div class="form-w3agile">
-					<h3>Login</h3>
-					<form action="<?php echo base_url("index.php/member/aksi_login")?>" method="post">
+					<h3>Login Admin</h3>
+					<form action="<?php echo base_url("index.php/admin/aksi_login")?>" method="post">
 						<div class="key">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
-							<input  type="text"   name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+							<input  type="text"   name="username_admin" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
 							<div class="clearfix"></div>
 						</div>
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i>
-							<input  type="password"  name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+							<input  type="password"  name="password_admin" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 							<div class="clearfix"></div>
 						</div>
 						<center><input type="submit" value="Login" name="submit"></center>

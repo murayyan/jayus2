@@ -53,7 +53,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					if ($cek == "invalid") {
 						echo 'Registrasi gagal';
 					}?>
-					<form action="aksi_register" method="post">
+					<form action="<?php echo base_url("index.php/member/aksi_register")?>" method="post">
 						<div class="form-group">
 							<label for="a">Username</label>
 						    <input type="text" name="username" class="form-control" id="a" aria-describedby="UsernameHelp" required>
