@@ -9,5 +9,8 @@ class M_member extends CI_Model{
 		 	return 'valid';
 		 }
 		 return 'invalid';
-	}		
+	}	
+	function getNama($table,$where){		
+		return $this->db->get_where($table,$where);
+	}	
 }

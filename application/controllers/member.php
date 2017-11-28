@@ -57,11 +57,15 @@ class Member extends CI_Controller{
             'username' => $username,
             'password' => md5($password)
             );
+        $a = $this->m_member->getNama("member",$where)->result_array();
+            foreach ($a as $i) {
+            }
+            $nama = $i['nama'];
         $cek = $this->m_member->cek_login("member",$where)->num_rows();
         if($cek > 0){
-
+            
             $data_session = array(
-                'nama' => $username,
+                'nama' => $nama,
                 'status' => "login"
                 );
 
