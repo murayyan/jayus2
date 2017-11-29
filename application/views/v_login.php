@@ -20,7 +20,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/easing.js')?>"></script>
 
 <!-- start-smoth-scrolling -->
-<link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet"> 
+<link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 <!--- start-rate---->
@@ -29,7 +29,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<?php 
+<?php
 	include 'header.php';
 ?>
   <!---->
@@ -44,11 +44,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--login-->
 
 	<div class="login">
-	
+
 		<div class="main-agileits">
 				<div class="form-w3agile">
 					<h3>Login</h3>
-					<form action="<?php echo base_url("index.php/member/aksi_login")?>" method="post">
+					<form action="<?php echo base_url("index.php/member/aksi_login")?>" method="post" >
 						<div class="key">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 							<input  type="text"   name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
@@ -68,7 +68,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</div>
-		
+
 <!--footer-->
 <?php
 	include 'footer.php';

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Member extends CI_Controller{
 
@@ -13,7 +13,30 @@ class Member extends CI_Controller{
 		}
 		$this->load->view('v_member');
 	}
-
+	function listiklan(){
+		$iklan = $this->m_member->selectAll($this->session->userdata('id_member'));
+		$this->load->view('v_memberListIklan',array('iklan'=>$iklan));
+	}
+	function bikiniklan(){
+		$this->load->view('v_memberBikinIklan');
+	}
+	function editiklan($id){
+		$iklan = $this->m_member->selectIklan($id);
+		$this->load->view('v_memberEditIklan',array('iklan'=>$iklan));
+	}
+	function updateIklan(){
+		var_dump($this->input->post['id_iklan']);
+		$iklan = $this->m_member->updateIklan();
+		redirect(base_url("index.php/member/listiklan"));
+	}
+	function insertIklan(){
+		$iklan = $this->m_member->insert();
+		redirect(base_url("index.php/member/listiklan"));
+	}
+	function hapusiklan($id){
+		$this->m_member->delete($id);
+		redirect(base_url("index.php/member/listiklan"));
+	}
 	function login(){
 		if($this->session->userdata('status') == "login"){
 			redirect(base_url("index.php/member/dashboard"));
@@ -25,7 +48,7 @@ class Member extends CI_Controller{
 		$this->load->view('v_registered');
 	}
 	function register(){
-		
+
 		$this->load->view('v_register');
 	}
 	function aksi_register(){
@@ -43,14 +66,15 @@ class Member extends CI_Controller{
             );
         $this->cek = $this->m_member->register("member",$data);
         if ($this->cek == 'valid') {
+
         	redirect(base_url("index.php/member/registered"));
 		}else{
 			$this->load->view('v_register', $this->cek);
-					
+
 		}
 	}
 	function aksi_login(){
-		
+
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $where = array(
@@ -63,10 +87,11 @@ class Member extends CI_Controller{
             $nama = $i['nama'];
         $cek = $this->m_member->cek_login("member",$where)->num_rows();
         if($cek > 0){
-            
+
             $data_session = array(
                 'nama' => $nama,
-                'status' => "login"
+                'status' => "login",
+								'id_member'=>$i['id_member']
                 );
 
             $this->session->set_userdata($data_session);
@@ -82,4 +107,5 @@ class Member extends CI_Controller{
         $this->session->sess_destroy();
         redirect(base_url('index.php/member/login'));
     }
+
 }

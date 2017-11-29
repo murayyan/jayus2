@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Admin extends CI_Controller{
 
@@ -20,8 +20,21 @@ class Admin extends CI_Controller{
 		}
 		$this->load->view('v_loginAdmin');
 	}
+
+	function listiklan(){
+		$iklan = $this->m_admin->selectAll();
+		$this->load->view('v_adminListIklan',array('iklan'=>$iklan));
+	}
+	function listmember(){
+		$member= $this->m_admin->selectAllMember();
+		$this->load->view('v_adminListMember',array('member'=>$member));
+	}
+	function hapusmember($id){
+		$this->m_admin->deleteMember($id);
+		redirect(base_url("index.php/admin/listmember"));
+	}
 	function aksi_login(){
-		
+
         $username = $this->input->post('username_admin');
         $password = $this->input->post('password_admin');
         $where = array(
@@ -30,7 +43,7 @@ class Admin extends CI_Controller{
             );
         $cek = $this->m_admin->cek_login("admin",$where)->num_rows();
         if($cek > 0){
-            
+
             $data_session = array(
                 'nama' => $username,
                 'status' => "login"
