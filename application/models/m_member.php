@@ -15,7 +15,7 @@ class M_member extends CI_Model{
 		return $data->result_array();
 	}
 	function updateIklan(){
-		$id_iklan = $this->input->post['id_iklan'];
+		$id_iklan = $this->input->post('id_iklan');
 		$data = array(
 							 'judul_iklan' => $this->input->post('judul'),
 							 'detail_iklan' => $this->input->post('deskripsi'),
