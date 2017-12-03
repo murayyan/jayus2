@@ -25,7 +25,6 @@ class Member extends CI_Controller{
 		$this->load->view('v_memberEditIklan',array('iklan'=>$iklan));
 	}
 	function updateIklan(){
-		var_dump($this->input->post['id_iklan']);
 		$iklan = $this->m_member->updateIklan();
 		redirect(base_url("index.php/member/listiklan"));
 	}
