@@ -8,10 +8,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Admin : <?php echo $this->session->userdata("nama"); ?> </title>
+<title>Member : <?php echo $this->session->userdata("nama"); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+<meta name="keywords" content=" Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <div id="wrapper">
 <?php
-include 'sidebarAdmin.php';
+include 'sidebarMember.php';
 ?>
         <div id="page-wrapper" class="gray-bg dashbard-1">
        <div class="content-main">
@@ -63,9 +63,9 @@ include 'sidebarAdmin.php';
 		    <div class="banner">
 
 				<h2>
-				<a href="index.html">Admin</a>
+				<a href="index.html">Member</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Profile</span>
+				<span>Edit Profile</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -75,36 +75,51 @@ include 'sidebarAdmin.php';
 			}
 			?>
  		<div class="profile-bottom">
- 			<h3><i class="fa fa-user"></i>Profile</h3>
- 			<div class="profile-bottom-top">
- 			<div class="col-md-4 profile-bottom-img">
- 				<img src="#" alt="">
- 			</div>
- 			<div class="col-md-8 profile-text">
+			<form action="updateProfileData" method="POST" >
+				<table  align="center"  class="table table-bordered table-hover table-striped">
 
- 				<h6><?php echo $i['username_admin']?></h6>
- 				<table>
- 				<tr><td>Username</td>
- 				<td>:</td>
- 				<td><?php echo $i['username_admin']?></td></tr>
- 				</table>
- 			</div>
- 			<div class="clearfix"></div>
- 			</div>
- 			<div class="profile-bottom-bottom">
- 			<div class="clearfix"></div>
- 			</div>
+					<tr align="center">
+						<td>Username</td>
+						<td>:</td>
+						<td><input type="text" name="username" size="45" style="width:100%;" value="<?=$i['username']?>" readonly /></td>
+					</tr>
+					<tr align="center">
+						<td>Nama</td>
+						<td>:</td>
+						<td><input type="text" name="nama" size="45" style="width:100%;" value="<?=$i['nama']?>"/></td>
+					</tr>
+					<tr align="center">
+						<td>Email</td>
+						<td>:</td>
+						<td><input type="text" name="email" size="45" style="width:100%;" value="<?=$i['email']?>"/></td>
+					</tr>
+					<tr align="center">
+						<td>no telpon</td>
+						<td>:</td>
+						<td><input type="text" name="nohp" style="width:100%;" value="<?=$i['nohp']?>"/></td>
+					</tr>
+					<tr align="center">
+					<td colspan="3"><input type="submit" name="submit" class="btn-primary"/></td>
+				</tr>
+
+				</table>
+			</form>
 
 
  		</div>
  	</div>
+		<div class="row">
+				<div class="col-lg-12">
+					<div class="table-responsive">
+
+				</div>
+			</div>
+		</div>
 		<!---->
 
 
 
-
 		</div>
-		<div class="clearfix"> </div>
        </div>
      </div>
 <!---->

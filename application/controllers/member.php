@@ -6,12 +6,26 @@ class Member extends CI_Controller{
 		parent::__construct();
 		 $this->load->model('m_member');
 	}
-
+	function editprofile(){
+		$data = array(
+				'id_member' => $this->session->userdata('id_member')
+				);
+		$this->det['hasil'] = $this->m_member->detailProfil("member",$data)->result_array();
+		$this->load->view('v_memberEditProfile',$this->det);
+	}
+	function updateProfileData(){
+		$iklan = $this->m_member->updateProfileDB();
+		redirect(base_url("index.php/member/dashboard"));
+	}
 	function dashboard(){
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("index.php/member/login"));
 		}
-		$this->load->view('v_member');
+		$data = array(
+				'id_member' => $this->session->userdata('id_member')
+				);
+		$this->det['hasil'] = $this->m_member->detailProfil("member",$data)->result_array();
+		$this->load->view('v_member', $this->det);
 	}
 	function listiklan(){
 		$iklan = $this->m_member->selectAll($this->session->userdata('id_member'));

@@ -11,7 +11,11 @@ class Admin extends CI_Controller{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("index.php/admin/login"));
 		}
-		$this->load->view('v_admin');
+		$data = array(
+				'username_admin' => $this->session->userdata('nama')
+				);
+		$this->det['hasil'] = $this->m_admin->detailProfil("admin",$data)->result_array();
+		$this->load->view('v_admin', $this->det);
 	}
 
 	function login(){

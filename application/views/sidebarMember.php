@@ -31,9 +31,6 @@
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret"><?php echo $this->session->userdata("nama"); ?><i class="caret"></i></span><img src="<?php echo base_url('assets/images/wo.jpg')?>"></a>
 		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile.html"><i class="fa fa-user"></i>Edit Profile</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
-		                <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
 		                <li><a href="logout"><i class="fa fa-clipboard"></i>Logout</a></li>
 		              </ul>
 		            </li>
@@ -49,7 +46,7 @@
                 <ul class="nav" id="side-menu">
 
 									<li>
-											<a href="<?php echo base_url('index.php/member/dashboard')?>" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+											<a href="<?php echo base_url('index.php/member/dashboard')?>" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Profile</span> </a>
 									</li>
 				 <li>
 											<a href="<?php echo base_url('index.php/member/listiklan')?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">List Iklan</span> </a>

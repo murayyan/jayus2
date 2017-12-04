@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <div id="wrapper">
 
-<?php 
+<?php
 include 'sidebarMember.php';
 ?>
         <div id="page-wrapper" class="gray-bg dashbard-1">
@@ -64,7 +64,7 @@ include 'sidebarMember.php';
 		    <div class="banner">
 
 				<h2>
-				<a href="index.html">Home</a>
+				<a href="index.html">Member</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Bikin Iklan</span>
 				</h2>

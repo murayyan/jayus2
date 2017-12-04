@@ -11,6 +11,9 @@ class M_admin extends CI_Model{
 		$data=$this->db->query("SELECT * FROM iklan");
 		return $data->result_array();
 	}
+	function detailProfil($table,$where){
+		return $this->db->get_where($table,$where);
+	}
 	function selectAllMember(){
 		$data=$this->db->query("SELECT * FROM member");
 		return $data->result_array();

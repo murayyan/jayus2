@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <div id="wrapper">
-<?php 
+<?php
 include 'sidebarMember.php';
 ?>
         <div id="page-wrapper" class="gray-bg dashbard-1">
@@ -136,33 +136,12 @@ include 'sidebarMember.php';
 
 					</tr>
 					<tr align="center">
-					<td colspan="3"><input type="submit" name="submit"/></td>
+					<td colspan="3"><input type="submit" name="submit" class="btn-primary"/></td>
 				</tr>
 	<?php		}
 			?>
 				</table>
 			</form>
-			</div>
-
-
-			<div class="col-md-7 mid-content-top">
-
-		<!--//sreen-gallery-cursual---->
-		<!-- requried-jsfiles-for owl -->
-		<link href="<?php echo base_url('assets/css/owl.carousel.css')?>" rel="stylesheet">
-		<script src="<?php echo base_url('assets/js/owl.carousel.js')?>"></script>
-			<script>
-				$(document).ready(function() {
-					$("#owl-demo").owlCarousel({
-						items : 3,
-						lazyLoad : true,
-						autoPlay : true,
-						pagination : true,
-						nav:true,
-					});
-				});
-			</script>
-		<!-- //requried-jsfiles-for owl -->
 			</div>
 			<div class="clearfix"> </div>
 		</div>

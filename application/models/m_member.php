@@ -10,6 +10,9 @@ class M_member extends CI_Model{
 		 }
 		 return 'invalid';
 	}
+	function detailProfil($table,$where){
+		return $this->db->get_where($table,$where);
+	}
 	function selectIklan($id){
 		$data=$this->db->query("SELECT * FROM iklan WHERE id_iklan = '$id'");
 		return $data->result_array();
@@ -26,6 +29,21 @@ class M_member extends CI_Model{
 		$this->db->where('id_iklan', $id_iklan);
 	  $this->db->update('iklan', $data);
 	}
+	function updateProfileDB(){
+		$id_member = $this->session->userdata('id_member');
+		$nama = $this->input->post('nama');
+		$email = $this->input->post('email');
+		$nohp = $this->input->post('nohp');
+		$data = array(
+				'nama' => $nama,
+				'email' => $email,
+				'nohp' => $nohp,
+				);
+		$this->db->where('id_member', $id_member);
+	  $this->db->update('member', $data);
+	}
+
+
 	function insert(){
 		$data = array(
 							 'id_member' => $this->session->userdata('id_member'),

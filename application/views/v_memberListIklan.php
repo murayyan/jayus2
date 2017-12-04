@@ -64,7 +64,7 @@ include 'sidebarMember.php';
 		    <div class="banner">
 
 				<h2>
-				<a href="index.html">Home</a>
+				<a href="index.html">Member</a>
 				<i class="fa fa-angle-right"></i>
 				<span>List Iklan</span>
 				</h2>

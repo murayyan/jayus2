@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <div id="wrapper">
-<?php 
+<?php
 include 'sidebarAdmin.php';
 ?>
         <div id="page-wrapper" class="gray-bg dashbard-1">
@@ -63,7 +63,7 @@ include 'sidebarAdmin.php';
 		    <div class="banner">
 
 				<h2>
-				<a href="index.html">Home</a>
+				<a href="index.html">Admin</a>
 				<i class="fa fa-angle-right"></i>
 				<span>List Iklan</span>
 				</h2>
