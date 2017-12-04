@@ -87,7 +87,7 @@ include 'header.php';
 						<div class=" con-w3l wthree-of">
 						 <?php foreach($hasil as $i){
 	?>
-							<div class='col-md-3 m-wthree'>s
+							<div class='col-md-3 m-wthree'>
 								<div class='col-m'>
 										<img src='<?php echo base_url('assets/')?><?php echo $i['img1'] ?>' class='img-responsive' alt=''>
 

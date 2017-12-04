@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <div id="wrapper">
-<?php 
+<?php
 include 'sidebarAdmin.php';
 ?>
         <div id="page-wrapper" class="gray-bg dashbard-1">
@@ -92,6 +92,7 @@ include 'sidebarAdmin.php';
 													<td>No HP</td>
 													<td>Kategori</td>
 													<td>Harga</td>
+													<td>Status</td>
 													<td>Link</td>
 													<td>      </td>
 												</tr>
@@ -107,10 +108,12 @@ include 'sidebarAdmin.php';
 															<td>".$i['detail_iklan'], "</td>
 															<td>".$i['no_hp_iklan'], "</td>
 															<td>".$i['kategori'],"</td>
-															<td>".$i['harga'],"</td>";
+															<td>".$i['harga'],"</td>
+															<td>".$i['status'],"</td>";
 													echo"
 															<td><a href='".base_url('index.php/home/produk/'.$i['id_iklan']),"')>LINK</a></td>
-															<td><a href='".base_url('index.php/member/hapusiklan/'.$i['id_iklan']),"' onClick=\"return confirm('Hapus Iklan Ini?')\"\><button class=\"btn-danger\"> Hapus</button></a></td>
+															<td><a href='".base_url('index.php/admin/verifiklan/'.$i['id_iklan']),"'onClick=\"return confirm('Verifikasi Iklan Ini?')\"\><button class=\"btn-primary\"> Verifikasi</button></a></td>
+															<td><a href='".base_url('index.php/admin/hapusiklan/'.$i['id_iklan']),"' onClick=\"return confirm('Hapus Iklan Ini?')\"\><button class=\"btn-danger\"> Hapus</button></a></td>
 															</tr>";
 												}
 											?>

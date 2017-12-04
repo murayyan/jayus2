@@ -33,6 +33,14 @@ class Admin extends CI_Controller{
 		$this->m_admin->deleteMember($id);
 		redirect(base_url("index.php/admin/listmember"));
 	}
+	function hapusiklan($id){
+		$this->m_admin->delete($id);
+		redirect(base_url("index.php/admin/listiklan"));
+	}
+	function verifiklan($id){
+		$iklan = $this->m_admin->verifiklan($id);
+		redirect(base_url("index.php/admin/listiklan"));
+	}
 	function aksi_login(){
 
         $username = $this->input->post('username_admin');

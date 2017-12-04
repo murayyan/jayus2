@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="index.html">JAYUS</a></h1>
+               <h1> <a class="navbar-brand" href="<?php echo base_url('index.php/home')?>">JAYUS</a></h1>
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -28,7 +28,7 @@
 		    <div class="drop-men" >
 		        <ul class=" nav_1">
 
-		    		
+
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret"><?php echo $this->session->userdata("nama"); ?><i class="caret"></i></span><img src="<?php echo base_url('assets/images/wo.jpg')?>"></a>
 		              <ul class="dropdown-menu " role="menu">

@@ -19,4 +19,15 @@ class M_admin extends CI_Model{
 		$this->db->where('id_member', $id);
 	  $this->db->delete('member');
 	}
+	function delete($id){
+		$this->db->where('id_iklan', $id);
+	  $this->db->delete('iklan');
+	}
+	function verifiklan($id){
+		$data = array(
+							 'status' => 'verified'
+					 );
+		$this->db->where('id_iklan', $id);
+	  $this->db->update('iklan', $data);
+	}
 }

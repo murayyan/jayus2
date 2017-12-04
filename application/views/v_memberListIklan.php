@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <div id="wrapper">
 
-<?php 
+<?php
 include 'sidebarMember.php';
 ?>
         <div id="page-wrapper" class="gray-bg dashbard-1">
@@ -93,6 +93,7 @@ include 'sidebarMember.php';
 													<td>No HP</td>
 													<td>Kategori</td>
 													<td>Harga</td>
+													<td>Status</td>
 													<td>Link</td>
 													<td>      </td>
 													<td>      </td>
@@ -109,7 +110,8 @@ include 'sidebarMember.php';
 															<td>".$i['detail_iklan'], "</td>
 															<td>".$i['no_hp_iklan'], "</td>
 															<td>".$i['kategori'],"</td>
-															<td>".$i['harga'],"</td>";
+															<td>".$i['harga'],"</td>
+															<td>".$i['status'],"</td>";
 													echo"
 															<td><a href='".base_url('index.php/home/produk/'.$i['id_iklan']),"')>LINK</a></td>
 
